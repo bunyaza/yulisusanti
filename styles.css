@@ -1,0 +1,59 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+.header{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 32px;
+    background: #0a0a23;
+    color: #fcf7ba;
+    border-bottom: 4px solid #fdb347;
+}
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 16px;
+}
+.gallery::after{
+    content: "";
+    width: 350px;
+}
+.background-image{
+    /* Make the image fill the container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.background-container{
+    /* Position the container */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+    /* Set z-index to ensure it's behind other content */
+    z-index: -1;
+    /* Ensure the container doesn't affect layout */
+    pointer-events: none;
+}
